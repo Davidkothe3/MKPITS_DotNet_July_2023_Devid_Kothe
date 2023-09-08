@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            .container{
+                position: relative;
+            }
+
+            .orange-box{
+                position:relative;
+                background: orangered;
+                z-index: 1;
+                /* top: 100px;
+                bottom: 50px; */
+                width: 400px;
+                height: 50px;
+            }
+
+            .white-box{
+                position: relative;
+                background: rebeccapurple;
+                z-index: 2;
+                /* top: 100px;
+                bottom: 55px; */
+                width:400px ;
+                height: 50px;
+            }
+
+            .green-box{
+                position: absolute;
+                background: green;
+                z-index: 3;
+                /* top:100px;
+                bottom: 60px; */
+                width: 400px;
+                height: 50px;
+
+            }
+            </style>
+    </head>
+    <body>
+        <h1> index work only position</h1>
+
+         <p>Because the image has a z-index of -1, it will be placed behind the text</p>
+
+         <div class="container">
+<div class="orange-box">these ais orange</div>
+<div class="white-box"> these is white`</div>
+<div class="green-box">these is green </div>
+
+         </div>
+    </body>
+</html>

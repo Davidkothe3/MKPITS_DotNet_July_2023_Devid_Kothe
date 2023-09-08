@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            .container{
+                position: relative;
+            }
+
+            .orange-box{
+                position: relative;
+                z-index: 1;
+                background: orangered;
+                border: 2px solid black;
+                height: 100px;
+                margin: 30px;
+            }
+
+            .white-box{
+                position: absolute;
+                z-index: 3;
+                background:white;
+                width: 100px;
+                left: 270px;
+                top: -15px;
+                height: 100px;
+            }
+
+            .green-box{
+                position: absolute;
+                z-index: 2;
+                background:green ;
+                width: 100px;
+                left: 70px;
+                top: 50px;
+                height:100px ;
+            }
+            </style>
+    </head>
+    <body>
+   <h1>z-index example</h1>
+
+   <p>
+    An example with greater stack order is always above and element with lowar strack order
+   </p>
+
+   <div class="container">
+
+    <div class="orange-box">orange-box(z-index:1)</div>
+    <div class="white-box">white-box(z-index:3)</div>
+    <div class="green-box">green-box(z-index:2)</div>
+
+   </div>
+    </body>
+</html>
