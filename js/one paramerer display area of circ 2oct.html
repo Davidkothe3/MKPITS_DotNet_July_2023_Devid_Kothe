@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script lang="javascript">
+
+    function calculate(radius)
+    {
+        var area=3.14*radius*radius;
+        return area;
+    }
+
+    function display()
+    {
+        rad=prompt("Enter radius: ");
+
+        var result=calculate(rad);
+        alert("Area of circle: " + result);
+    }
+   </script>
+</head>
+<body>
+    <input type="button" value="display area of circle" onclick="display();">
+</body>
+</html>
