@@ -4,25 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace vowel_or_consonant
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int year;
-            Console.WriteLine("Enter Year");
-            year=Convert.ToInt32(Console.ReadLine());
+            char a;
 
-            if(year % 4 == 0 )
+            Console.WriteLine("enter the char=");
+            a=Convert.ToChar(Console.ReadLine());
+
+            if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u')
             {
-                Console.WriteLine("Leap Year");
+                Console.WriteLine("vowel");
             }
+
             else
             {
-                Console.WriteLine("Not Leap Year");
+                Console.WriteLine("consonant");
             }
+
             Console.ReadKey();
+
         }
     }
 }
