@@ -1,45 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
-namespace prime_no_or_not
+namespace no.is_prime_or_not
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int number;
-            Console.WriteLine("enter number");
-            number = Convert.ToInt32(Console.ReadLine());
-            int counter = 2;
-            int flag = 0;
-            while (counter < number)
+            int num,i;
+             int fact = 0;
+
+            Console.WriteLine("enter the num");
+            num=Convert.ToInt32(Console.ReadLine());
+
+            for(  i=2;i<num;i++)
             {
-                if (number % counter == 0)
+                if (num % 2 == 0)
                 {
-                    flag = 1;
+                    fact = 1;
                     break;
                 }
-                counter++;
-
             }
-            if (flag == 0)
+
+            if(fact == 0)
             {
-                Console.WriteLine("no is prime");
+                Console.WriteLine("number is prime");
             }
             else
             {
-                Console.WriteLine("no is not prime");
+                Console.WriteLine("not prime");
             }
 
-
             Console.ReadKey();
-
-
-        }
         }
     }
+}
