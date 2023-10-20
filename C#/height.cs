@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace problrm1
+namespace categorize_according_to_their_height
 {
     internal static class Program
     {

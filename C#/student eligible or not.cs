@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace problrm1
+namespace student_eligible_or_not
 {
     internal static class Program
     {

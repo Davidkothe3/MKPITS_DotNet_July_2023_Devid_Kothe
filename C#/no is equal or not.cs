@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace problrm1
+namespace num_are_equal_or_not
 {
     internal static class Program
     {

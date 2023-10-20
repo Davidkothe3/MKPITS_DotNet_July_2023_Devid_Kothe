@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace problrm1
+namespace leap_year_or_not
 {
     internal static class Program
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace problrm1
+namespace num_odd_or_even
 {
     internal static class Program
     {
