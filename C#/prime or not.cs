@@ -3,39 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers;
 
 namespace no.is_prime_or_not
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static int choice(int n)
         {
-            int num,i;
-             int fact = 0;
-
-            Console.WriteLine("enter the num");
-            num=Convert.ToInt32(Console.ReadLine());
-
-            for(  i=2;i<num;i++)
+            int i = 1;
+            for ( i = 1; i <= n; i++)
             {
-                if (num % 2 == 0)
+                if (n % 2 == 1)
                 {
-                    fact = 1;
+                    Console.WriteLine("prime no");
+                    break;
+                }
+
+                else
+                {
+                    Console.WriteLine("not prime no");
                     break;
                 }
             }
+            return i;
+        }
+            
+        static void Main(string[] args)
+        {
+            int num;
+            Console.WriteLine("enter the num");
+            num=Convert.ToInt32(Console.ReadLine());
 
-            if(fact == 0)
-            {
-                Console.WriteLine("number is prime");
-            }
-            else
-            {
-                Console.WriteLine("not prime");
-            }
-
-            Console.ReadKey();
+            int res = choice(num);
+        Console.ReadKey();
         }
     }
 }
