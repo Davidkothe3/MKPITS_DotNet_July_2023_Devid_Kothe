@@ -8,29 +8,34 @@ namespace abstract_class_person
 {
     abstract class person
     {
-        public abstract void display();
-
-        public void showdata()
-        {
-            Console.WriteLine("hellow from show data");
-        }
+        public string name;
     }
-
     class student:person
     {
-        public override void display()
-        {
-           Console.WriteLine("hellow from display method");
-        }
+        public int rollno;
     }
+    sealed class parttimestudent:student
+    {
+        public int hour;
 
+
+    }
+   // class bus:parttimestudent  class cant be create by using shild class
+    {
+
+    }//
     internal class Program
     {
         static void Main(string[] args)
         {
-            student s=new student();
-            s.display();
-            s.showdata();
+         
+            parttimestudent p= new parttimestudent();
+            p.rollno = 1;
+            p.name = "shanu";
+            p.hour = 2;
+            Console.WriteLine("rno "+ p.rollno);
+            Console.WriteLine("name " +  p.name);
+            Console.WriteLine("hour " + p.hour);
 
             Console.ReadKey();
         }
