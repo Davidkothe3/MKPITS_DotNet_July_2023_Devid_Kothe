@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace example
+namespace Windows_class_student
 {
     internal class student
     {
@@ -13,8 +13,9 @@ namespace example
 
         public student(int rno,string name)
         {
-            this.rno = rno;
-            this.name = name;
+        this.rno = rno;
+        this.name = name;
         }
+
     }
 }
