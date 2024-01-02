@@ -1,0 +1,136 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace jan_2_ado
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        string conss = "server = DESKTOP-EDB1BOV\\SQLEXPRESS; integrated security = true ; database = ado";
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conss);
+            try
+            {
+                con.Open();
+                MessageBox.Show("Connection Successfully");
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+           
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conss);
+            try
+            {
+                con.Open();
+                string query = " insert into Ado values ( '" + textBox1.Text +"','" +textBox2.Text+ "')";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Inserted SuccessFully");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conss);
+            try
+            {
+                con.Open();
+                string query = "Update ado set passwords = '" + textBox2.Text + "' where username = '" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(query,con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Update SuccessFully");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conss);
+            try
+            {
+                con.Open();
+                string query = "delete from ado where username = '" + textBox1.Text + "' and passwords = '" + textBox2.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Delete successfully");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+            }
+            catch(Exception ex )
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conss);
+            try
+            {
+                con.Open();
+                string query = "select * from ado where username  = '" + textBox1.Text+"'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Search successfully");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+    }
+}
